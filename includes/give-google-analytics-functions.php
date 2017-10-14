@@ -181,7 +181,7 @@ function give_google_analytics_send_completed_beacon( $payment_id ) {
 		'pr1br' => 'Fundraising',
 		'pr1qt' => 1,   // Product 1 quantity. Required.
 	) );
-	error_log( print_r( $args, true ) . "\n", 3, WP_CONTENT_DIR . '/debug_new.log' );
+
 	$args = array_map( 'rawurlencode', $args );
 
 	$url = add_query_arg( $args, 'https://www.google-analytics.com/collect' );
